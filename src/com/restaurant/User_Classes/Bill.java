@@ -122,10 +122,11 @@ public class Bill {
     }
             
             
-          public void clear()
+          public static void clear()
           {
              item.clear();
-             
+              TotalCashe=0;
+        TotalCasheAfterPormortion=0;
           }
     
           

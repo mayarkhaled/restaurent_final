@@ -286,7 +286,7 @@ public class item_panal extends javax.swing.JPanel {
                                     .addComponent(availablelable))))
                         .addGap(27, 27, 27)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(orderB, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                            .addComponent(orderB, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel8)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -356,7 +356,9 @@ public class item_panal extends javax.swing.JPanel {
             item_panal.setPrice(Double.parseDouble(jLabel5.getText()));
             item_panal.setIntquantity_in_bill(1);
             if(jLabel10.isVisible()){
-                  item_panal.getPormotion().setDiscount(/*Integer.parseInt(jLabel10.getText())*/50);
+                 String []pormotion=jLabel10.getText().split("%");
+                System.out.print(pormotion[0]);
+                  item_panal.getPormotion().setDiscount(Integer.parseInt(pormotion[0]));
                
             }
            else{

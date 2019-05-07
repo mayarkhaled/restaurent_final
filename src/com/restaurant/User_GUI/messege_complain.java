@@ -133,6 +133,7 @@ public class messege_complain extends javax.swing.JFrame {
        order o=new order(jTextArea1.getText(),b);
        o.add_order();
        this.setVisible(false);
+       Bill.clear();
        
     }//GEN-LAST:event_jButton1ActionPerformed
 
