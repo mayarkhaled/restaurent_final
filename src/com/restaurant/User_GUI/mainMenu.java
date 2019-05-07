@@ -9,6 +9,7 @@ import java.sql.Statement;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 import java.util.Dictionary;
 import java.util.HashMap;
@@ -80,7 +81,27 @@ public class mainMenu {
                    Item item = new Item();
                  item_panal item_p = new item_panal();
                 item.setName(helper.dBResult.getString("item_name")) ;
-                item.setRank( helper.dBResult.getInt("item_rank"));
+                 String rank = helper.dBResult.getString("item_rank");
+                if(rank !=null){
+                 String[] rank_arr = rank.split(","); 
+                 System.out.println(rank_arr.length);
+                
+                 List<Float> list = new ArrayList<Float>();
+                 for(int i=0;i<rank_arr.length;i++)
+                 {
+                     System.out.println(rank_arr[i]);
+                     list.add(Float.parseFloat(rank_arr[i]));
+                 }
+                 Collections.sort(list);
+                 int av = (list.size()-1)/2;
+                 for(int j=0;j<list.size();j++)
+                 {
+                     if(j==av)
+                         item.setRank(list.get(j));
+                 }
+                }
+                 
+               // item.setRank( helper.dBResult.getInt("item_rank"));
                 item.setPrice( helper.dBResult.getDouble("item_price"));
                 String price_string = Double.toString(item.getPrice());
                 item.setCategoryname(helper.dBResult.getString("item_cat"));
