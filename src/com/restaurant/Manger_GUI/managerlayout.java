@@ -8,6 +8,7 @@ import com.restaurant.User_Classes.Customer;
 import com.restaurant.helper;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -97,7 +98,7 @@ public class managerlayout extends javax.swing.JFrame {
         updataquntityB2.setkHoverForeGround(new java.awt.Color(153, 0, 0));
         updataquntityB2.setkHoverStartColor(new java.awt.Color(0, 0, 0));
         updataquntityB2.setkIndicatorThickness(0);
-        updataquntityB2.setkSelectedColor(new java.awt.Color(0, 0, 0));
+        updataquntityB2.setkSelectedColor(new java.awt.Color(204, 0, 0));
         updataquntityB2.setkStartColor(new java.awt.Color(0, 0, 0));
         updataquntityB2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -196,7 +197,7 @@ public class managerlayout extends javax.swing.JFrame {
         add_announce.setkHoverForeGround(new java.awt.Color(153, 0, 0));
         add_announce.setkHoverStartColor(new java.awt.Color(0, 0, 0));
         add_announce.setkIndicatorThickness(0);
-        add_announce.setkSelectedColor(new java.awt.Color(0, 0, 0));
+        add_announce.setkSelectedColor(new java.awt.Color(204, 0, 0));
         add_announce.setkStartColor(new java.awt.Color(0, 0, 0));
         add_announce.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -264,6 +265,11 @@ public class managerlayout extends javax.swing.JFrame {
         jTextField4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jTextField4MouseClicked(evt);
+            }
+        });
+        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField4ActionPerformed(evt);
             }
         });
         getContentPane().add(jTextField4);
@@ -487,12 +493,12 @@ private void make_text_like_line()
 }
 private void fill_text()
 {
-     jTextField1.setText("name");
+  /*   jTextField1.setText("name");
      jTextField2.setText("message");
      jTextField3.setText("items");
      jTextField4.setText("end time");
      jTextField5.setText("price");
-
+*/
 }
     private void add_announceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add_announceActionPerformed
       
@@ -514,7 +520,7 @@ private void fill_text()
            Date date = new Date();  
            String current_day = formatter.format(date);
            String end_date =  jTextField4.getText();
-           double price = Double.parseDouble(jTextField5.getText());
+           double price = Double.parseDouble(jTextField5.getText().trim());  
            Manager m=new Manager();
            m.publishAnnouncementOffers(ann_name, ann_message,current_day,end_date,price,items_name);
          
@@ -568,6 +574,10 @@ private void fill_text()
         fill_text();
         jTextField5.setText("");
     }//GEN-LAST:event_jTextField5MouseClicked
+
+    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField4ActionPerformed
 
     /**
      * @param args the command line arguments
