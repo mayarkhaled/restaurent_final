@@ -37,14 +37,16 @@ public class Main_page extends javax.swing.JFrame {
     int click=0;
     public Main_page() {
         initComponents();
-        this.setExtendedState(Main_page.MAXIMIZED_BOTH);
+        this.setLocationRelativeTo(null);
+        this.setSize(1519, 869);
+       // this.setExtendedState(Main_page.MAXIMIZED_BOTH);
         jPanel4.setVisible(false);
         jPanel7.setVisible(false);
         jButton1.doClick();
         jButton1.setBackground(new Color (0,0,0,200));
         jButton2.setBackground(new Color (0,0,0,0));
         jButton3.setBackground(new Color (0,0,0,0));
-        jButton4.setBackground(new Color (0,0,0,0));
+       
         Login.setBackground(new Color (0,0,0,0));
         jLabel9.setVerticalAlignment(SwingConstants.NORTH);
        jPanel1.setBackground(new Color(0,0,0,200));
@@ -79,7 +81,6 @@ public class Main_page extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
         kButton2 = new keeptoo.KButton();
         jPanel6 = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
@@ -112,6 +113,8 @@ public class Main_page extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1519, 869));
+        setSize(new java.awt.Dimension(1519, 869));
         getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
@@ -277,20 +280,6 @@ public class Main_page extends javax.swing.JFrame {
             }
         });
 
-        jButton4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/history.png"))); // NOI18N
-        jButton4.setText("History");
-        jButton4.setToolTipText("");
-        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jButton4MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jButton4MouseExited(evt);
-            }
-        });
-
         kButton2.setText("Edit");
         kButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         kButton2.setkEndColor(new java.awt.Color(153, 153, 153));
@@ -310,7 +299,6 @@ public class Main_page extends javax.swing.JFrame {
             .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jButton3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jButton2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
@@ -325,15 +313,13 @@ public class Main_page extends javax.swing.JFrame {
                 .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(8, 8, 8)
                 .addComponent(kButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
+                .addGap(47, 47, 47)
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
+                .addGap(64, 64, 64)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(24, 24, 24))
         );
 
         Login.add(jPanel3);
@@ -347,7 +333,7 @@ public class Main_page extends javax.swing.JFrame {
         jRadioButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jRadioButton1.setText("user name");
         jPanel7.add(jRadioButton1);
-        jRadioButton1.setBounds(40, 110, 104, 28);
+        jRadioButton1.setBounds(40, 110, 101, 25);
 
         jRadioButton2.setBackground(new java.awt.Color(255, 255, 255));
         buttonGroup1.add(jRadioButton2);
@@ -359,7 +345,7 @@ public class Main_page extends javax.swing.JFrame {
             }
         });
         jPanel7.add(jRadioButton2);
-        jRadioButton2.setBounds(40, 150, 88, 28);
+        jRadioButton2.setBounds(40, 150, 85, 25);
 
         jRadioButton3.setBackground(new java.awt.Color(255, 255, 255));
         buttonGroup1.add(jRadioButton3);
@@ -371,14 +357,14 @@ public class Main_page extends javax.swing.JFrame {
             }
         });
         jPanel7.add(jRadioButton3);
-        jRadioButton3.setBounds(40, 230, 110, 28);
+        jRadioButton3.setBounds(40, 230, 110, 25);
 
         jRadioButton4.setBackground(new java.awt.Color(255, 255, 255));
         buttonGroup1.add(jRadioButton4);
         jRadioButton4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jRadioButton4.setText("Phone");
         jPanel7.add(jRadioButton4);
-        jRadioButton4.setBounds(40, 190, 76, 28);
+        jRadioButton4.setBounds(40, 190, 73, 25);
 
         jLabel16.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel16.setText("Enter old data");
@@ -616,14 +602,6 @@ jButton1.setBackground(new Color (0,0,0,200));
         jButton3.setBackground(new Color (0,0,0,0));
     }//GEN-LAST:event_jButton3MouseExited
 
-    private void jButton4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseEntered
-        jButton4.setBackground(new Color (0,0,0,200));
-    }//GEN-LAST:event_jButton4MouseEntered
-
-    private void jButton4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseExited
-        jButton4.setBackground(new Color (0,0,0,0));
-    }//GEN-LAST:event_jButton4MouseExited
-
     private void jButton2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseEntered
          jButton2.setBackground(new Color (0,0,0,200));
     }//GEN-LAST:event_jButton2MouseEntered
@@ -832,7 +810,6 @@ jButton1.setBackground(new Color (0,0,0,200));
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

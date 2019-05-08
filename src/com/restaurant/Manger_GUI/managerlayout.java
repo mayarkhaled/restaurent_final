@@ -537,7 +537,8 @@ private void fill_text()
     }//GEN-LAST:event_add_announceMouseClicked
 
     private void updataquntityB2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updataquntityB2ActionPerformed
-        
+add_dlievery a=new add_dlievery();
+a.show();
     }//GEN-LAST:event_updataquntityB2ActionPerformed
 
     private void updataquntityB2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_updataquntityB2MouseClicked

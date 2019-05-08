@@ -170,9 +170,6 @@ public class add_dlievery extends javax.swing.JFrame {
         add.setBounds(310, 540, 400, 40);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/food.jpg"))); // NOI18N
-        jLabel1.setMaximumSize(new java.awt.Dimension(1080, 620));
-        jLabel1.setMinimumSize(new java.awt.Dimension(1080, 620));
-        jLabel1.setPreferredSize(new java.awt.Dimension(1080, 620));
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 1080, 620);
 

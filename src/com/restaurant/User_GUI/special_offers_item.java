@@ -147,6 +147,11 @@ public class special_offers_item extends javax.swing.JPanel {
         jLabel8.setText("jLabel8");
 
         kButton1.setText("Order Now");
+        kButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kButton1ActionPerformed(evt);
+            }
+        });
 
         jLabel9.setText("message");
 
@@ -207,9 +212,9 @@ public class special_offers_item extends javax.swing.JPanel {
                         .addGap(6, 6, 6)
                         .addComponent(kButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(jLabel8))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel8)
+                    .addComponent(jLabel7))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
@@ -217,6 +222,12 @@ public class special_offers_item extends javax.swing.JPanel {
                 .addContainerGap(18, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void kButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kButton1ActionPerformed
+        messege_complain m = new messege_complain();
+        m.getjTextField1().setText(jLabel8.getText());
+        m.show();
+    }//GEN-LAST:event_kButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

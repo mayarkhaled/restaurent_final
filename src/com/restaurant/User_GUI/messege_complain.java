@@ -8,6 +8,7 @@ package com.restaurant.User_GUI;
 import com.restaurant.User_Classes.Bill;
 import com.restaurant.User_Classes.order;
 import java.awt.Color;
+import javax.swing.JTextField;
 
 /**
  *
@@ -19,6 +20,14 @@ public class messege_complain extends javax.swing.JFrame {
      * Creates new form messege_complain
      */
     Bill b=new Bill();
+
+    public JTextField getjTextField1() {
+        return jTextField1;
+    }
+
+    public void setjTextField1(JTextField jTextField1) {
+        this.jTextField1 = jTextField1;
+    }
             
     public messege_complain() {
         initComponents();

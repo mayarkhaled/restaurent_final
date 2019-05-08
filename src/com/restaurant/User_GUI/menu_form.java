@@ -60,6 +60,7 @@ public class menu_form extends javax.swing.JFrame  {
      */
        public menu_form(int m)
     {
+        
         Timer time=new Timer();
         time.scheduleAtFixedRate(new TimerTask() {
             @Override
@@ -74,7 +75,7 @@ public class menu_form extends javax.swing.JFrame  {
             }
         }, 1000,1000);
         initComponents();
-        
+        this.setLocationRelativeTo(null);
          mainMenu menu = new mainMenu("5m Restaurent",true);
              menu.View_menu();
         
@@ -161,6 +162,8 @@ public class menu_form extends javax.swing.JFrame  {
         choiceimgB = new keeptoo.KButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
+        setPreferredSize(new java.awt.Dimension(1370, 854));
         getContentPane().setLayout(null);
         getContentPane().add(jTabbedPane1);
         jTabbedPane1.setBounds(670, 0, 690, 816);
